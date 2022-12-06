@@ -1,5 +1,5 @@
 import "./App.css";
-import react, { useEffect, useState } from "react";
+import { useState } from "react";
 import Background from "./images/background.jpeg";
 import funnyOlga from "./funnyOlga";
 import drugBooze from "./images/drugBooze.png";
@@ -13,7 +13,6 @@ function App() {
     "The World of Veganism",
     "Music to your ears",
   ];
-  const [whichClicked, setWhichClicked] = useState(0);
   const [clicked, setClicked] = useState(false);
   const [index, setIndex] = useState(0);
   const [alert, setAlert] = useState(false);
@@ -26,6 +25,41 @@ function App() {
       setAlert(false);
       setClicked(true);
     }, 3000);
+  };
+
+  const ImageHandler = (index) => {
+    switch (index.index) {
+      case 0:
+        return (
+          <div className="imageContainer">
+            <img src={gang} />
+          </div>
+        );
+      case 1:
+        return (
+          <div className="imageContainer">
+            <img src={drugBooze} />
+          </div>
+        );
+      case 2:
+        return (
+          <div className="imageContainer">
+            <img src={vegan} />
+          </div>
+        );
+      case 3:
+        return (
+          <div className="imageContainer">
+            <img src={gang} />
+          </div>
+        );
+      default:
+        return (
+          <div className="imageContainer">
+            <img src={gang} />
+          </div>
+        );
+    }
   };
 
   if (!clicked) {
@@ -44,8 +78,10 @@ function App() {
             <div className="headerContainer">
               <h1>SECRET SANTA 2022</h1>
               <h2>WELCOME TO YOUR ANSWERS OLGALICIOUS!</h2>
-              <h2>CLICK A BUTTON TO FIND THE ANSWER KEY</h2>
             </div>
+            <br />
+            <br />
+
             <div className="buttonContainer">
               {crosswords.map((c, i) => {
                 return (
@@ -59,12 +95,9 @@ function App() {
                   </button>
                 );
               })}
-              {alert && (
-                <div className="alert-container">
-                  <div className="alert-inner">Alert! Alert!</div>
-                </div>
-              )}
             </div>
+            <br />
+            <h2 className="note">CLICK A BUTTON TO FIND THE ANSWER KEY</h2>
           </div>
         </div>
       );
@@ -83,6 +116,9 @@ function App() {
             <div className="imageContainer">
               <img src={randomImage} />
             </div>
+            <h2 className="note">
+              OLGALICIOUS, OLGALICIOUS, SHE'S SO VICIOUS, SHE'S SO VICIOUS
+            </h2>
           </div>
         </div>
       );
@@ -99,9 +135,9 @@ function App() {
         }}
       >
         <div className="App">
-          <h1>ANSWERS</h1>
+          <h1 className="note">ANSWERS</h1>
           <br />
-          <img src={gang} />
+          <ImageHandler index={index} />
           <div className="buttonContainer">
             <button
               onClick={() => {
@@ -111,6 +147,8 @@ function App() {
               Go Back
             </button>
           </div>
+          <h2 className="note">Lots of Love, Colin ❤️</h2>
+          <h4 className="note2">2022</h4>
         </div>
       </div>
     );

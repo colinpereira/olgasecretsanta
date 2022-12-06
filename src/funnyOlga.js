@@ -7,6 +7,7 @@ const funnyOlga = [
   require("./funnyOlga/6.jpg"),
   require("./funnyOlga/7.jpg"),
   require("./funnyOlga/8.JPG"),
+  require("./funnyOlga/9.jpeg"),
 ];
 
 export default funnyOlga;

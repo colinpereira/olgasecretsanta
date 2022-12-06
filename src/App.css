@@ -20,7 +20,7 @@
   justify-content: center;
   height: fit-content;
   flex-direction: column;
-  width: 600px;
+  width: 950px;
   height: 70vh;
   border-radius: 30px;
   background-color: rgb(42, 72, 4, 0.5);
@@ -35,12 +35,29 @@
   background-color: transparent;
 }
 
+.headerContainer h1 {
+  font-size: 80px;
+}
+
 .headerContainer > * {
-  margin: 5px;
-  text-transform: uppercase;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-weight: 900;
+  font-size: 40px;
+  color: transparent;
+  text-align: center;
+  animation: effect 2s linear infinite;
+}
+
+@keyframes effect {
+  0% {
+    background: linear-gradient(#008000, #00ff00);
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    background: linear-gradient(#7f0404, #ce1403);
+    -webkit-background-clip: text;
+  }
 }
 
 .buttonContainer {
@@ -70,4 +87,10 @@
 .imageContainer img {
   max-height: 70vh;
   max-width: 80vh;
+}
+
+.note {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
 }
