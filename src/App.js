@@ -147,8 +147,8 @@ function App() {
               Go Back
             </button>
           </div>
-          <h2 className="note">Lots of Love, Colin ❤️</h2>
-          <h4 className="note2">2022</h4>
+          <h2 className="note">Lots of Love, Colinskey ❤️</h2>
+          <h4 className="note">~ December 2022 ~</h4>
         </div>
       </div>
     );
