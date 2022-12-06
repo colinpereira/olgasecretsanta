@@ -1,8 +1,8 @@
 import "./App.css";
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import Background from "./images/background.jpeg";
 import funnyOlga from "./funnyOlga";
-import brugBooze from "./images/drugBooze.png";
+import drugBooze from "./images/drugBooze.png";
 import gang from "./images/gang.png";
 import vegan from "./images/vegan.png";
 
@@ -14,7 +14,7 @@ function App() {
     "Music to your ears",
   ];
   const [whichClicked, setWhichClicked] = useState(0);
-  const [clicked, setClicked] = useState(true);
+  const [clicked, setClicked] = useState(false);
   const [index, setIndex] = useState(0);
   const [alert, setAlert] = useState(false);
 
@@ -24,6 +24,7 @@ function App() {
     setAlert(true);
     setTimeout(() => {
       setAlert(false);
+      setClicked(true);
     }, 3000);
   };
 
@@ -47,7 +48,16 @@ function App() {
             </div>
             <div className="buttonContainer">
               {crosswords.map((c, i) => {
-                return <button onClick={handleCrosswordButton}>{c}</button>;
+                return (
+                  <button
+                    onClick={() => {
+                      setIndex(i);
+                      handleCrosswordButton();
+                    }}
+                  >
+                    {c}
+                  </button>
+                );
               })}
               {alert && (
                 <div className="alert-container">
