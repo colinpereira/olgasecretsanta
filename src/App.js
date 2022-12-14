@@ -5,6 +5,7 @@ import funnyOlga from "./funnyOlga";
 import drugBooze from "./images/drugBooze.png";
 import gang from "./images/gang.png";
 import vegan from "./images/vegan.png";
+import musicToYourEars from "./images/musictoyourears.png";
 
 function App() {
   const crosswords = [
@@ -50,7 +51,7 @@ function App() {
       case 3:
         return (
           <div className="imageContainer">
-            <img src={gang} />
+            <img src={musicToYourEars} />
           </div>
         );
       default:
