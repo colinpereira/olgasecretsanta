@@ -6,6 +6,7 @@ import drugBooze from "./images/drugBooze.png";
 import gang from "./images/gang.png";
 import vegan from "./images/vegan.png";
 import musicToYourEars from "./images/musictoyourears.png";
+import booklet from "./booklet.pdf";
 
 function App() {
   const crosswords = [
@@ -99,6 +100,15 @@ function App() {
             </div>
             <br />
             <h2 className="note">CLICK A BUTTON TO FIND THE ANSWER KEY</h2>
+            <div className="downloadContainer">
+              <button
+                onClick={() => {
+                  window.open(booklet, "_blank", "noopener,noreferrer");
+                }}
+              >
+                Download the booklet
+              </button>
+            </div>
           </div>
         </div>
       );

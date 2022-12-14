@@ -94,3 +94,22 @@
     "Lucida Sans", Arial, sans-serif;
   color: white;
 }
+
+.downloadContainer button {
+  padding: 6px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a8d658;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.downloadContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: flex-end;
+}
